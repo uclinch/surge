@@ -91,6 +91,13 @@
           "type": "text",
           "desc": "京喜工厂互助码.你自己的互助码."
         }
+      ],
+      "author": "@whyour",
+      "repo": "https://github.com/uclinch/surge/blob/master/shareCode-auto.js",
+      "script": "https://raw.githubusercontent.com/uclinch/surge/master/shareCode-auto.js",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/jdnc_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/jdnc.png"
       ]
     }
   ]
