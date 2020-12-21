@@ -106,7 +106,7 @@
           "val": "",
           "type": "text",
           "desc": "京东赚赚互助码.你自己的互助码."
-        },
+        }
       ],
       "author": "@whyour",
       "repo": "https://github.com/uclinch/surge/blob/master/shareCode-auto.js",
