@@ -21,7 +21,7 @@ const shareCodes = [
     mc: $.getdata("mc_shareCode2") || "",
     ddgc: $.getdata("dd_shareCode2") || "",
     jxgc: $.getdata("jx_shareCode2") || "",
-    jxgc: $.getdata("jx_shareCode2") || "",
+    jdzz: $.getdata("zz_shareCode2") || "",
   },
 ];
 $.result = [];
@@ -60,6 +60,12 @@ $.random = Math.floor(Math.random() * 60);
       (await create(
         `http://api.turinglabs.net/api/v1/jd/jxfactory/create/${jxgc}/`,
         "京喜工厂"
+      ));
+    await $.wait($.random);
+    jdzz &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jxgc}/`,
+        "京东赚赚"
       ));
   }
   await showMsg();
