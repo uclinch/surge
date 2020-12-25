@@ -66,6 +66,13 @@
           "desc": "京东赚赚互助码.你自己的互助码."
         },
         {
+          "id": "crazyjoy_shareCode1",
+          "name": "疯狂的joy互助码1",
+          "val": "",
+          "type": "text",
+          "desc": "疯狂的joy互助码.你自己的互助码."
+        },        
+        {
           "id": "zd_shareCode2",
           "name": "种豆得豆互助码2",
           "val": "",
@@ -106,7 +113,14 @@
           "val": "",
           "type": "text",
           "desc": "京东赚赚互助码.你自己的互助码."
-        }
+        },
+        {
+          "id": "crazyjoy_shareCode2",
+          "name": "疯狂的joy互助码2",
+          "val": "",
+          "type": "text",
+          "desc": "疯狂的joy互助码.你自己的互助码."
+        }        
       ],
       "author": "@whyour",
       "repo": "https://github.com/uclinch/surge/blob/master/shareCode-auto.js",
