@@ -66,13 +66,13 @@ $.random = Math.floor(Math.random() * 60);
     await $.wait($.random);
     jdzz &&
       (await create(
-        `https://code.chiang.fun/api/v1/jd/jdzz/create/${zz}/`,
+        `https://code.chiang.fun/api/v1/jd/jdzz/create/${jdzz}/`,
         "京东赚赚"
       ));
     await $.wait($.random);
     jdcrazyjoy &&
       (await create(
-        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${crazyjoy}/`,
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jdcrazyjoy}/`,
         "疯狂的joy"
       ));    
   }
