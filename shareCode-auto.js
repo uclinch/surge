@@ -14,6 +14,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode1") || "P04z54XCjVWnYaS5kZ7fCKtjCEX",
     jxgc: $.getdata("jx_shareCode1") || "k3XRgh9SqTEODDhQVrfL1A==",
     jdzz: $.getdata("zz_shareCode1") || "",
+    jdcrazyjoy: $.getdata("zz_shareCode1") || "",    
   },
   {
     zd: $.getdata("zd_shareCode2") || "",
@@ -22,6 +23,7 @@ const shareCodes = [
     ddgc: $.getdata("dd_shareCode2") || "",
     jxgc: $.getdata("jx_shareCode2") || "",
     jdzz: $.getdata("zz_shareCode2") || "",
+    jdcrazyjoy: $.getdata("zz_shareCode2") || "",    
   },
 ];
 $.result = [];
@@ -67,6 +69,12 @@ $.random = Math.floor(Math.random() * 60);
         `https://code.chiang.fun/api/v1/jd/jdzz/create/${jxgc}/`,
         "京东赚赚"
       ));
+    await $.wait($.random);
+    jdcrazyjoy &&
+      (await create(
+        `https://code.chiang.fun/api/v1/jd/jdcrazyjoy/create/${jxgc}/`,
+        "疯狂的joy"
+      ));    
   }
   await showMsg();
 })()
