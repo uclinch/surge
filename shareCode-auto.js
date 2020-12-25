@@ -27,12 +27,12 @@ const shareCodes = [
   },
 ];
 $.result = [];
-$.random = Math.floor(Math.random() * 60);
+$.random = Math.floor(Math.random() * 2);
 
 !(async () => {
   console.log(`\n此脚本延迟${$.random}秒执行\n`);
   for (let i = 0; i < shareCodes.length; i++) {
-    const { zd, nc, mc, ddgc, jxgc } = shareCodes[i];
+    const { zd, nc, mc, ddgc, jxgc, jdzz, jdcrazyjoy } = shareCodes[i];
     await $.wait($.random);
     zd &&
       (await create(
