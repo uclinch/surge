@@ -3,7 +3,7 @@ const FEED_REGEX = /https?:\/\/.*\.snssdk\.com\/api\/news\/feed/;
 
 let magicJS = MagicJS(SCRIPT_NAME, "INFO");
 
-let blockKeyWords = ['女性','女权','日本']
+let blockKeyWords = ['女权','日本']
 
 function Main(){
   if (magicJS.isResponse){
