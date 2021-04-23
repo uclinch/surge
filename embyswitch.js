@@ -11,7 +11,7 @@ if (h >= 18 || h <8) {
 }
 
 $surge.setSelectGroupPolicy('emby', embyNewPolicy);
-$notification.post("Script called", "emby自动切换", "'emby' switched to '" + embyNewPolicy + "'");
+$notification.post("魔法启动~", "emby自动切换", "'emby' switched to '" + embyNewPolicy + "'");
 console.log("embySwitch.js script: 'emby' switched to '" + embyNewPolicy + "'");
 
 $done();
