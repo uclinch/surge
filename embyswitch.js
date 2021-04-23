@@ -1,17 +1,17 @@
 var d = new Date();
 var h = d.getHours();
 
-const embyDay   = '星星✨饭团';
-const embyNight = '影视专线';
+const EmbyDay   = '星星✨饭团';
+const EmbyNight = '影视专线';
 
 if (h >= 18 || h <8) {
-    var embyNewPolicy = embyNight;
+    var EmbyNewPolicy = EmbyNight;
 } else {
-    var embyNewPolicy = embyDay;
+    var EmbyNewPolicy = EmbyDay;
 }
 
-$surge.setSelectGroupPolicy('emby', embyNewPolicy);
-$notification.post("魔法启动~", "emby自动切换", "'emby' switched to '" + embyNewPolicy + "'");
-console.log("embySwitch.js script: 'emby' switched to '" + embyNewPolicy + "'");
+$surge.setSelectGroupPolicy('Emby', EmbyNewPolicy);
+$notification.post("魔法启动~", "Emby自动切换", "'Emby' switched to '" + EmbyNewPolicy + "'");
+console.log("EmbySwitch.js script: 'Emby' switched to '" + EmbyNewPolicy + "'");
 
 $done();
