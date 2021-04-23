@@ -1,17 +1,17 @@
 var d = new Date();
 var h = d.getHours();
 
-const TwitchDay   = '星星✨饭团';
-const TwitchNight = '影视专线';
+const embyDay   = '星星✨饭团';
+const embyNight = '影视专线';
 
-if (h >= 21 || h <8) {
-    var TwitchNewPolicy = TwitchNight;
+if (h >= 18 || h <8) {
+    var embyNewPolicy = embyNight;
 } else {
-    var TwitchNewPolicy = TwitchDay;
+    var embyNewPolicy = embyDay;
 }
 
-$surge.setSelectGroupPolicy('emby', TwitchNewPolicy);
-$notification.post("Script called", "TwitchSwitch.js", "'🍿 Twitch' switched to '" + TwitchNewPolicy + "'");
-console.log("TwitchSwitch.js script: 'emby' switched to '" + TwitchNewPolicy + "'");
+$surge.setSelectGroupPolicy('emby', embyNewPolicy);
+$notification.post("Script called", "embySwitch.js", "'emby' switched to '" + embyNewPolicy + "'");
+console.log("embySwitch.js script: 'emby' switched to '" + embyNewPolicy + "'");
 
 $done();
