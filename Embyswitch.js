@@ -4,7 +4,7 @@ var h = d.getHours();
 const EmbyDay   = '星星✨饭团';
 const EmbyNight = '影视专线';
 
-if (h >= 18 || h <8) {
+if (h >= 18 || h <3) {
     var EmbyNewPolicy = EmbyNight;
 } else {
     var EmbyNewPolicy = EmbyDay;
