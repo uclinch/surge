@@ -1,0 +1,9 @@
+#!name=支付宝淘票票评分改为豆瓣评分
+#!desc=评分修改
+#众所周知，淘票票为了卖票，评分一般都虚高，评分都是资本推广随便写的，所以改用豆瓣评分，更加真实可靠一点。避免各位踩雷。
+#模块引用Peng-YM大佬的脚本。
+[Script]
+淘票票豆瓣评分=type=http-response, requires-body=1, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid, script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
+
+[MITM]
+hostname = %APPEND% guide-acs.m.taobao.com
