@@ -1,10 +1,10 @@
 var d = new Date();
 var h = d.getHours();
 
-const EmbyDay   = '星星✨饭团';
-const EmbyNight = '影视专线';
+const EmbyDay   = '免流';
+const EmbyNight = 'Proxy';
 
-if (h >= 18 || h <3) {
+if (h >= 19 || h <8) {
     var EmbyNewPolicy = EmbyNight;
 } else {
     var EmbyNewPolicy = EmbyDay;
