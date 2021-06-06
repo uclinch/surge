@@ -4,7 +4,7 @@ var h = d.getHours();
 const EmbyDay   = '免流🚀';
 const EmbyNight = 'Direct';
 
-if (h >= 19 || h <8) {
+if (h >= 19 || h <8.5) {
     var EmbyNewPolicy = EmbyNight;
 } else {
     var EmbyNewPolicy = EmbyDay;
