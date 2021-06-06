@@ -2,7 +2,7 @@ var d = new Date();
 var h = d.getHours();
 
 const EmbyDay   = '免流';
-const EmbyNight = 'Proxy';
+const EmbyNight = 'Direct';
 
 if (h >= 19 || h <8) {
     var EmbyNewPolicy = EmbyNight;
