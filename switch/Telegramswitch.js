@@ -1,17 +1,17 @@
 var d = new Date();
 var h = d.getHours();
 
-const TelegramDay   = 'Proxy';
-const TelegramNight = '影视专线';
+const TwitchDay   = 'Proxy';
+const TwitchNight = '影视专线';
 
-if (h >= 20 || h <1) {
-    var TelegramNewPolicy = TelegramNight;
+if (h >= 21 || h <1) {
+    var TwitchNewPolicy = TwitchNight;
 } else {
-    var TelegramNewPolicy = TelegramDay;
+    var TwitchNewPolicy = TwitchDay;
 }
 
-$surge.setSelecTelegramroupPolicy('Telegram', TelegramNewPolicy);
-$notification.post("开始变换形态~", "定时切换", "'Telegram' 切换到 '" + TelegramNewPolicy + "'");
-console.log("TelegramSwitch.js script: 'Telegram' 切换到 '" + TelegramNewPolicy + "'");
+$surge.setSelectGroupPolicy('Telegram', TwitchNewPolicy);
+$notification.post("Script called", "TelegramSwitch.js", "'Telegram' switched to '" + TwitchNewPolicy + "'");
+console.log("TelegramSwitch.js script: 'Telegram' switched to '" + TwitchNewPolicy + "'");
 
 $done();
