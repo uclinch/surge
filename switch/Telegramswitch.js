@@ -11,7 +11,6 @@ if (h >= 20 || h <1) {
 }
 
 $surge.setSelectGroupPolicy('Telegram', TelegramNewPolicy);
-$notification.post("定时切换", "嗖的一下~", "'Telegram' 切换到 '" + TelegramNewPolicy + "'");
-console.log("嗖的一下~ script: 'Telegram' 切换到 '" + TelegramNewPolicy + "'");
+
 
 $done();

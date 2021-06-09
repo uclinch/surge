@@ -11,7 +11,6 @@ if (h >= 20 || h <1) {
 }
 
 $surge.setSelectGroupPolicy('Pixiv', PixivNewPolicy);
-$notification.post("定时切换", "嗖的一下~", "'Pixiv' 切换到 '" + PixivNewPolicy + "'");
-console.log("嗖的一下~ script: 'Pixiv' 切换到 '" + PixivNewPolicy + "'");
+
 
 $done();
