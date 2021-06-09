@@ -1,17 +1,17 @@
 var d = new Date();
 var h = d.getHours();
 
-const EmbyDay   = '免流🚀';
-const EmbyNight = 'Direct';
+const EmbyDay   = 'Proxy';
+const EmbyNight = '影视专线';
 
-if (h >= 18 || h <8) {
+if (h >= 20 || h <1) {
     var EmbyNewPolicy = EmbyNight;
 } else {
     var EmbyNewPolicy = EmbyDay;
 }
 
-$surge.setSelectGroupPolicy('🌞外出在家🌙', EmbyNewPolicy);
-$notification.post("魔法启动~", "免流定时切换", "'🌞外出在家🌙' 切换到 '" + EmbyNewPolicy + "'");
-console.log("EmbySwitch.js script: '🌞外出在家🌙' 切换到 '" + EmbyNewPolicy + "'");
+$surge.setSelectGroupPolicy('Emby', EmbyNewPolicy);
+$notification.post("定时切换", "嗖的一下~", "'Emby' 切换到 '" + EmbyNewPolicy + "'");
+console.log("嗖的一下~ script: 'Emby' 切换到 '" + EmbyNewPolicy + "'");
 
 $done();
