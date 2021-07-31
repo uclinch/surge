@@ -1,7 +1,7 @@
 var d = new Date();
 var h = d.getHours();
 
-const PixivDay   = 'Direct';
+const PixivDay   = 'HYBRID';
 const PixivNight = '高速';
 
 if (h >= 20 || h <1) {
