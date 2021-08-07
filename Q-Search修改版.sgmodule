@@ -42,7 +42,7 @@
 # tm: 天猫
 
 # ac:  Acfun
-# bli: 哔哩哔哩
+# bl: 哔哩哔哩
 # ytb: YouTube
 # ph:  PornHub 
 # gd:  Google Drive资源
@@ -142,8 +142,8 @@
 # ac (Acfun)
 ^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
 
-# bli (哔哩哔哩) 
-^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+# bl (哔哩哔哩) 
+^https:\/\/duckduckgo.com\/\?q=bl\+([^&]+).+ bilibili://search?keyword=%@ 302
 
 # ytb  (YouTube)
 ^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
