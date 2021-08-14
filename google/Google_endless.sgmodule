@@ -2,8 +2,6 @@
 #!desc=google 相关重写（特别修改版）
 #!system=ios
 
-# 修改自：https://raw.githubusercontent.com/Shawn1eong/Proxy-Tools/5623572e6ae7ec3d4327b0026e329b8535a47fe8/Module/Class/Endless_Google/Google_endless.sgmodule
-
 [Header Rewrite]
 #  google.cn 重定向
 # Redirect Google Search Service
