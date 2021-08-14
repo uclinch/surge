@@ -7,7 +7,7 @@
 
 # uclinch修改版
 # (优化了ios键盘首字母自动大写的问题，无需区分大小写)
-# 配合快捷指令可直接跳转到对应app使用：https://www.icloud.com/shortcuts/bfa18c339483404e9a370bb83ed29c9f
+# 配合快捷指令可直接跳转到对应app使用：https://www.icloud.com/shortcuts/dabe19f928224d409ab3be07591461bd
 
 
 # - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
@@ -50,7 +50,7 @@
 
 # ac:  Acfun
 # bl: 哔哩哔哩
-# yt: YouTube
+# ytb: YouTube
 # ph:  PornHub 
 # gd:  Google Drive资源
 # tgd: TG搜索Google Drive资源
@@ -195,9 +195,9 @@
 ^https:\/\/duckduckgo.com\/\?q=bl\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=bl, 302
 ^https:\/\/duckduckgo.com\/\?q=Bl\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=bl, 302
 
-# yt  (YouTube)  【可跳转app】
-^https:\/\/duckduckgo.com\/\?q=yt\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=yt, 302
-^https:\/\/duckduckgo.com\/\?q=Yt\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=yt, 302
+# ytb  (YouTube)  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=ytb\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=ytb, 302
+^https:\/\/duckduckgo.com\/\?q=Ytb\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=ytb, 302
 
 # ph  (PornHub) 
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
