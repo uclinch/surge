@@ -1,10 +1,14 @@
-#!name=🔍Q-Search-All in one Modified by uclinch
-#!desc=Browser Search Add-ons, Modified from module by Neurogram
+#!name=Q-Search-All in one
+#!desc=Browser Search Add-ons
 #!system=ios
 
 # Q-Search 
-# Modified by uclinch
-# From Neurogram (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+# 原作者 (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+
+# uclinch修改版
+# (优化了ios键盘首字母自动大写的问题，无需区分大小写)
+# 配合快捷指令可直接跳转到对应app使用：https://www.icloud.com/shortcuts/bfa18c339483404e9a370bb83ed29c9f
+
 
 # - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
 
@@ -25,6 +29,7 @@
 # trc: Google 译至中
 # tre: Google 译至英
 # trj: Google 译至日
+# cd: 词典
 
 
 # db：豆瓣搜索
@@ -39,25 +44,31 @@
 # amz: 亚马逊
 # jd: 京东
 # tb: 淘宝
+# tbdp: 淘宝店铺
 # tm: 天猫
+# dp: 大众点评
 
 # ac:  Acfun
 # bl: 哔哩哔哩
-# ytb: YouTube
+# yt: YouTube
 # ph:  PornHub 
 # gd:  Google Drive资源
 # tgd: TG搜索Google Drive资源
  
 # bi: 必应
-# gg：百度搜索
+# bd：百度搜索
 # ddg：DuckDuckGo 搜索
-# 无指令则转 百度 搜索
+# sm: 神马搜索
+# 无指令则转 谷歌 搜索
+
+#ph：pornhub
 
 [URL Rewrite]
 
 #gm   (Google图片)
 ^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+
 # gh   (GitHub)
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Gh\+([^&]+).+ https://github.com/search?q=$1 302
@@ -107,16 +118,19 @@
 ^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
 
+# cd：词典  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=cd\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=cd, 302
+^https:\/\/duckduckgo.com\/\?q=cd\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=cd, 302
 
 # 社区
 
-# db：豆瓣
-^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
-^https:\/\/duckduckgo.com\/\?q=Db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+# db：豆瓣  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=db\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=db, 302
+^https:\/\/duckduckgo.com\/\?q=Db\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=db, 302
 
-# zh: 知乎
-^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
-^https:\/\/duckduckgo.com\/\?q=Zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+# zh: 知乎  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=zh\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
+^https:\/\/duckduckgo.com\/\?q=Zh\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=zh, 302
 
 # wb: 微博
 ^https:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
@@ -151,17 +165,25 @@
 ^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
 
-# jd : 京东
-^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
-^https:\/\/duckduckgo.com\/\?q=Jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+# jd: 京东  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=jd\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=jd, 302
+^https:\/\/duckduckgo.com\/\?q=Jd\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=jd, 302
 
-# tb: 淘宝
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ taobao://s.taobao.com?q=%@ 302
-^https:\/\/duckduckgo.com\/\?q=Tb\+([^&]+).+ taobao://s.taobao.com?q=%@ 302
+# tb: 淘宝  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=tb\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=tb, 302
+^https:\/\/duckduckgo.com\/\?q=Tb\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=tb, 302
+
+# tbdp: 淘宝店铺
+^https:\/\/duckduckgo.com\/\?q=tbdp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=tbdp, 302
+^https:\/\/duckduckgo.com\/\?q=Tbdp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=tbdp, 302
 
 # tm: 天猫
 ^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+
+# dp：大众点评  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=dp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=dp, 302
+^https:\/\/duckduckgo.com\/\?q=Dp\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=dp, 302
 
 # 视频资源
 
@@ -169,13 +191,13 @@
 ^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
 ^https:\/\/duckduckgo.com\/\?q=Ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
 
-# bl (哔哩哔哩) 
-^https:\/\/duckduckgo.com\/\?q=bl\+([^&]+).+ bilibili://search?keyword=$1 302
-^https:\/\/duckduckgo.com\/\?q=Bl\+([^&]+).+ bilibili://search?keyword=$1 302
+# bl (哔哩哔哩)  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=bl\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=bl, 302
+^https:\/\/duckduckgo.com\/\?q=Bl\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=bl, 302
 
-# ytb  (YouTube)
-^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
-^https:\/\/duckduckgo.com\/\?q=Ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+# yt  (YouTube)  【可跳转app】
+^https:\/\/duckduckgo.com\/\?q=yt\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=yt, 302
+^https:\/\/duckduckgo.com\/\?q=Yt\+ shortcuts://x-callback-url/run-shortcut?name=URL%20Rewrite&input=text&text=yt, 302
 
 # ph  (PornHub) 
 ^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
@@ -196,16 +218,20 @@
 ^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
 
+# bd: 百度
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+^https:\/\/duckduckgo.com\/\?q=Bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
 # ddg: DuckDuckGo 
 ^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
 
-# gg: 谷歌
-^https:\/\/duckduckgo.com\/\?q=gg\+([^&]+).+ https://www.google.com/search?q=$1 302
-^https:\/\/duckduckgo.com\/\?q=Gg\+([^&]+).+ https://www.google.com/search?q=$1 302
+# sm: 神马搜索
+^https:\/\/duckduckgo.com\/\?q=sm\+([^&]+).+ https://quark.sm.cn/s?q=$1 302
+^https:\/\/duckduckgo.com\/\?q=Sm\+([^&]+).+ https://quark.sm.cn/s?q=$1 302
 
-# 无指令: 百度
-^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.baidu.com/s?wd=$1 302
+# 无指令: 谷歌
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
 
 [MITM]
 hostname = %APPEND% duckduckgo.com
