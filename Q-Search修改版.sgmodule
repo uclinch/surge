@@ -59,6 +59,7 @@
 # bd：百度搜索
 # ddg：DuckDuckGo 搜索
 # sm: 神马搜索
+# tt：头条搜索
 # 无指令则转 谷歌 搜索
 
 #ph：pornhub
@@ -230,8 +231,13 @@
 ^https:\/\/duckduckgo.com\/\?q=sm\+([^&]+).+ https://quark.sm.cn/s?q=$1 302
 ^https:\/\/duckduckgo.com\/\?q=Sm\+([^&]+).+ https://quark.sm.cn/s?q=$1 302
 
+# tt：头条搜索
+^https:\/\/duckduckgo.com\/\?q=tt\+([^&]+).+ https://so.toutiao.com/search/?keyword=$1 302
+^https:\/\/duckduckgo.com\/\?q=Tt\+([^&]+).+ https://so.toutiao.com/search/?keyword=$1 302
+
 # 无指令: 谷歌
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
 
 [MITM]
 hostname = %APPEND% duckduckgo.com
