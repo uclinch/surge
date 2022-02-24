@@ -12,5 +12,4 @@
       #在里面找到 gist 勾选提交
 
 [Script]
-
 恢复 = type=cron,cronexp=5 10 * * *,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,wake-system=true,timeout=600
