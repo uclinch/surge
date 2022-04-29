@@ -1,7 +1,6 @@
 # NAME: Weibo
 # DOMAIN-KEYWORD: 1
 # TOTAL: 1
-[Rule]
 DOMAIN-KEYWORD,weibo
 
 # IP rules
